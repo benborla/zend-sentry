@@ -1,0 +1,36 @@
+{
+    "name": "benborla/zend-sentry",
+    "description": "A Zend Framework module that lets you log to the Sentry service. This is a re-upload for my own personal testing environment.",
+    "keywords": ["log", "logging", "sentry", "raven", "zend-framework"],
+    "homepage": "https://github.com/cloud-solutions/zend-sentry",
+    "type": "library",
+    "version": "2.4.0",
+    "license": "New BSD License",
+    "authors": [
+        {
+            "name": "Markus Hausammann",
+            "email": "markus.hausammann@brightanswer.ch"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "larapack/dd": "^1.1",
+        "cloud-solutions/zend-sentry": "2.4.0",
+        "sentry/sentry": "1.7.0"
+    },
+    "conflict": {
+        "zendframework/zendframework": "<2.5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZendSentry\\": "src/"
+        }
+    },
+	"scripts": {
+		"post-root-package-install": [
+			"@php -r \"file_exists('config/autoload/zend-sentry.global.php') || copy('vendor/benborla/zend-sentry/config/zend-sentry.global.php.dist', 'config/autoload/zend-sentry.global.php');\"",
+			"@php -r \"file_exists('config/autoload/zend-sentry.local.php') || copy('vendor/benborla/zend-sentry/config/zend-sentry.local.php.dist', 'config/autoload/zend-sentry.local.php');\"",
+		],
+	}
+}
