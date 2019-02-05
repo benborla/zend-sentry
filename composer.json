@@ -5,7 +5,7 @@
     "homepage": "https://github.com/cloud-solutions/zend-sentry",
     "type": "library",
     "version": "2.4.0",
-    "license": "New BSD License",
+    "license": "OSL-3.0",
     "authors": [
         {
             "name": "Markus Hausammann",
