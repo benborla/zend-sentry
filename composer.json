@@ -30,7 +30,7 @@
 	"scripts": {
 		"post-root-package-install": [
 			"@php -r \"file_exists('config/autoload/zend-sentry.global.php') || copy('vendor/benborla/zend-sentry/config/zend-sentry.global.php.dist', 'config/autoload/zend-sentry.global.php');\"",
-			"@php -r \"file_exists('config/autoload/zend-sentry.local.php') || copy('vendor/benborla/zend-sentry/config/zend-sentry.local.php.dist', 'config/autoload/zend-sentry.local.php');\"",
+			"@php -r \"file_exists('config/autoload/zend-sentry.local.php') || copy('vendor/benborla/zend-sentry/config/zend-sentry.local.php.dist', 'config/autoload/zend-sentry.local.php');\""
 		]
 	}
 }
